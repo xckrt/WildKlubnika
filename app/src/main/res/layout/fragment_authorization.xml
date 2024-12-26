@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="#121212"
+    tools:context=".Authorization">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Авторизация"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/white"/>
+
+        <!-- Email Input -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Введите email"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#808080"
+            android:hint="Ваш email"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+
+        <!-- Password Input -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Введите пароль"
+
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ваш пароль"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass"
+            android:background="#808080"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/changepass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Забыли пароль?"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="end"/>
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:layout_marginTop="32dp"
+            android:padding="12dp"
+            android:text="Авторизоваться"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/registerLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Нет аккаунта? Зарегистрируйтесь"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center"
+        />
+
+    </LinearLayout>

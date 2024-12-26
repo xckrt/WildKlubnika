@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Изображение товара -->
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_placeholder"
+    android:contentDescription="Product Image"
+    android:scaleType="centerCrop" />
+
+    <!-- Название товара -->
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Описание товара -->
+    <TextView
+        android:id="@+id/product_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Description"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Категория:Вот"/>
+    <!-- Рейтинг товара -->
+    <LinearLayout
+        android:id="@+id/product_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <!-- Звездочки для рейтинга будут добавляться программно -->
+    </LinearLayout>
+
+    <!-- Количество товара -->
+    <TextView
+        android:id="@+id/product_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity: 10"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Склад товара -->
+    <TextView
+        android:id="@+id/product_warehouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Warehouse: Warehouse Name"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Кнопка "Купить" -->
+    <Button
+        android:id="@+id/buy_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Купить"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

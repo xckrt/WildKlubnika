@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addproduct.AddProductFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productNameTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/productNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Название товара"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productCategoryTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productPriceTextInputLayout"
+        android:layout_marginTop="16dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/productCategoryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Категория товара"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Описание товара -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productDescriptionTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/productNameTextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/productDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Описание товара"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Цена товара -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/productPriceTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/productDescriptionTextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/productPriceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Цена товара"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Кнопка для сохранения товара -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Сохранить товар"
+        app:layout_constraintTop_toBottomOf="@+id/productCategoryTextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

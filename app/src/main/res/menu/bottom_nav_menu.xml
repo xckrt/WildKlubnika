@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Главная" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Категории" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/corzina"
+        android:title="Корзина" />
+    <item
+        android:id="@+id/navigation_lk"
+        android:icon="@drawable/lk"
+        android:title="Личный кабинет"/>
+    <item
+        android:id="@+id/nav_seller_dashboard"
+        android:title="Режим продавца"
+        android:icon="@drawable/seller" />
+
+</menu>

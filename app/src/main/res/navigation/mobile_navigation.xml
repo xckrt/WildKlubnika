@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_auth">
+
+    <!-- Главная страница -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.wildklubnika.ui.home.HomeFragment"
+        android:label="Главная"
+        tools:layout="@layout/fragment_home">
+        <action android:id="@+id/home_to_full" app:destination="@id/full"/>
+    </fragment>
+
+    <!-- Категории -->
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.wildklubnika.ui.dashboard.DashboardFragment"
+        android:label="Категории"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <!-- Корзина -->
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.wildklubnika.ui.cart.CartFragment"
+        android:label="Корзина"
+        tools:layout="@layout/fragment_cart" />
+
+    <!-- Личный кабинет -->
+    <fragment
+        android:id="@+id/navigation_lk"
+        android:name="com.example.wildklubnika.ui.lichka.LkFragment"
+        android:label="Личный Кабинет"
+        tools:layout="@layout/fragment_lk" />
+
+    <fragment android:id="@+id/tovars" tools:layout="@layout/fragment_tovars"
+    android:name="com.example.wildklubnika.Tovars"/>
+    <!-- Режим продавца (Этот фрагмент будет доступен только для продавцов) -->
+
+    <fragment
+        android:id="@+id/nav_seller_dashboard"
+        android:name="com.example.wildklubnika.FragmentSellerDashboard"
+        android:label="Режим продавца"
+        tools:layout="@layout/fragment_seller_dashboard">
+        <action
+            android:id="@+id/action_LkFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment" />
+        <action
+            android:id="@+id/action_LkFragment_to_editProductFragment"
+            app:destination="@id/tovars" />
+        <action
+            android:id="@+id/action_LkFragment_to_trackOrdersFragment"
+            app:destination="@id/trackOrdersFragment" />
+        <action
+            android:id="@+id/action_LkFragment_to_selectWarehouseFragment"
+            app:destination="@id/selectWarehouseFragment" />
+        <action
+            android:id="@+id/action_LkFragment_to_financesFragment"
+            app:destination="@id/financesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.example.wildklubnika.addproduct.AddProductFragment"
+        android:label="Add Product"
+        tools:layout="@layout/fragment_add_product" />
+
+    <!-- Фрагмент для редактирования товара -->
+    <fragment
+        android:id="@+id/editProductFragment"
+        android:name="com.example.wildklubnika.editproduct.EditProductFragment"
+        android:label="Edit Product"
+        tools:layout="@layout/fragment_edit_product" />
+
+    <!-- Фрагмент для отслеживания заказов -->
+    <fragment
+        android:id="@+id/trackOrdersFragment"
+        android:name="com.example.wildklubnika.trackorders.TrackOrdersFragment"
+        android:label="Track Orders"
+        tools:layout="@layout/fragment_track_orders" />
+
+    <!-- Фрагмент для выбора склада -->
+    <fragment
+        android:id="@+id/selectWarehouseFragment"
+        android:name="com.example.wildklubnika.Warehouses.SelectWarehouseFragment"
+        android:label="Select Warehouse"
+        tools:layout="@layout/fragment_select_warehouse" />
+
+    <fragment android:name="com.example.wildklubnika.editproduct.EditProductFragment" tools:layout="@layout/fragment_edit_product" android:id="@+id/edit">
+    <action android:id="@+id/backtotovars" app:destination="@id/tovars"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/financesFragment"
+        android:name="com.example.wildklubnika.finances.FinancesFragment"
+        android:label="Finances"
+        tools:layout="@layout/fragment_finances" />
+
+    <fragment
+        android:id="@+id/nav_auth"
+        android:name="com.example.wildklubnika.Authorization"
+        tools:layout="@layout/fragment_authorization">
+        <action android:id="@+id/action_authorization_to_home" app:destination="@id/navigation_home"/>
+        <action android:id="@+id/toreg" app:destination="@id/nav_reg"/>
+    </fragment>
+    <fragment android:id="@+id/full" android:name="com.example.wildklubnika.ProductDetailsFragment" tools:layout="@layout/fragment_product_details"/>
+    <fragment android:id="@+id/nav_reg"
+        android:name="com.example.wildklubnika.Registration"
+        tools:layout="@layout/fragment_registration">
+        <action android:id="@+id/reg_to_auth" app:destination="@id/nav_auth"/>
+    </fragment>
+    <fragment android:id="@+id/categories" tools:layout="@layout/category_and_products" android:name="com.example.wildklubnika.CategoryandProducts">
+        <action android:id="@+id/categories_to_full" app:destination="@id/full"/>
+    </fragment>
+</navigation>
+

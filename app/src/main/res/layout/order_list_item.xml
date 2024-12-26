@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/orderIdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order ID: #12345"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/orderStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Pending"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/orderDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: 2024-11-28"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/orderTotalPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Price: $123.45"
+        android:layout_marginTop="4dp" />
+</LinearLayout>
